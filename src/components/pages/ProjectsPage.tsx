@@ -96,15 +96,15 @@ export const ProjectsPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            <h1 className="sr-hero text-4xl sm:text-5xl font-bold mb-6">
               Community Projects
             </h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
+            <p className="sr-content text-xl text-purple-100 max-w-3xl mx-auto mb-8">
               Discover and contribute to open-source projects built by the
               AgenticPH community. From AI tools to automation scripts, we're
               building the future together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="sr-cta flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://github.com/agentic-ph"
                 target="_blank"
@@ -128,7 +128,7 @@ export const ProjectsPage = () => {
         {/* Featured Projects */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="sr-heading text-3xl font-bold text-gray-900 mb-8">
               Featured Projects
             </h2>
 
@@ -137,7 +137,7 @@ export const ProjectsPage = () => {
                 {featuredProjects.map((project) => (
                   <div
                     key={project.id}
-                    className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-purple-200"
+                    className="sr-card bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-purple-200"
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
@@ -233,7 +233,7 @@ export const ProjectsPage = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16 mb-16">
+              <div className="sr-content text-center py-16 mb-16">
                 <svg
                   className="w-16 h-16 text-gray-400 mx-auto mb-4"
                   fill="none"
@@ -281,7 +281,7 @@ export const ProjectsPage = () => {
         {/* Community Projects */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="sr-heading text-3xl font-bold text-gray-900 mb-8">
               Community Projects
             </h2>
 
@@ -290,7 +290,7 @@ export const ProjectsPage = () => {
                 {communityProjects.map((project) => (
                   <div
                     key={project.id}
-                    className="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                    className="sr-card bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
@@ -376,7 +376,7 @@ export const ProjectsPage = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12">
+              <div className="sr-content text-center py-12">
                 <svg
                   className="w-16 h-16 text-gray-400 mx-auto mb-4"
                   fill="none"
@@ -425,13 +425,15 @@ export const ProjectsPage = () => {
         {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Contribute?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <h2 className="sr-heading text-3xl font-bold mb-4">
+              Ready to Contribute?
+            </h2>
+            <p className="sr-content text-xl text-blue-100 mb-8">
               Join our community and help build the future of AI and automation
               tools. Whether you're a beginner or expert, there's a place for
               you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="sr-cta flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://github.com/agentic-ph"
                 target="_blank"

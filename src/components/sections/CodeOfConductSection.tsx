@@ -5,12 +5,12 @@ export const CodeOfConductSection = () => {
     <section id="code-of-conduct" className="py-16 bg-blue-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="sr-heading text-3xl font-bold text-gray-900 mb-4">
             Code of Conduct
           </h2>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm p-8">
+        <div className="sr-content bg-white rounded-lg shadow-sm p-8">
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
             We value the participation of each member of the AgenticPH community
             and want all members to have an enjoyable and fulfilling experience.
@@ -26,7 +26,7 @@ export const CodeOfConductSection = () => {
             inclusive behavior.
           </p>
 
-          <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+          <div className="sr-card bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
             <h3 className="text-lg font-semibold text-blue-900 mb-3">
               Contact Information
             </h3>
@@ -35,7 +35,7 @@ export const CodeOfConductSection = () => {
               have any other concerns, please contact a member of the AgenticPH
               Code of Conduct workgroup immediately.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="sr-cta flex flex-col sm:flex-row gap-4">
               <a
                 href={SOCIAL_LINKS.discord}
                 target="_blank"

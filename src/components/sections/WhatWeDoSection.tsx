@@ -3,8 +3,10 @@ export const WhatWeDoSection = () => {
     <section id="what-we-do" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">What We Do</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="sr-heading text-4xl font-bold text-gray-900 mb-6">
+            What We Do
+          </h2>
+          <p className="sr-content text-xl text-gray-600 max-w-3xl mx-auto">
             We organize events, workshops, and initiatives that bring together
             the Filipino AI and automation community to learn, build, and
             innovate together.
@@ -13,7 +15,7 @@ export const WhatWeDoSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Meetups */}
-          <div className="bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-xl">
+          <div className="sr-card bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-xl">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
                 <svg
@@ -48,7 +50,7 @@ export const WhatWeDoSection = () => {
           </div>
 
           {/* Mentorship */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl">
+          <div className="sr-card bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
                 <svg
@@ -81,7 +83,7 @@ export const WhatWeDoSection = () => {
           </div>
 
           {/* Community Projects */}
-          <div className="bg-gradient-to-br from-orange-50 to-red-100 p-8 rounded-xl">
+          <div className="sr-card bg-gradient-to-br from-orange-50 to-red-100 p-8 rounded-xl">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
                 <svg
@@ -116,12 +118,12 @@ export const WhatWeDoSection = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        <div className="sr-content text-center mt-16">
           <p className="text-lg text-gray-600 mb-8 text-balance">
             Whether you're new to AI or an experienced builder, you're welcome
             to join this community!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="sr-cta flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#connect"
               className="inline-flex items-center justify-center bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors"

@@ -8,8 +8,10 @@ export const ConnectSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6">Connect With Us</h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <h2 className="sr-heading text-4xl font-bold mb-6">
+            Connect With Us
+          </h2>
+          <p className="sr-content text-xl text-blue-100 max-w-3xl mx-auto">
             Join our vibrant community across different platforms. Stay updated,
             share ideas, and collaborate with fellow developers and AI
             enthusiasts.
@@ -22,7 +24,7 @@ export const ConnectSection = () => {
             href={SOCIAL_LINKS.discord}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="sr-card group bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
           >
             <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-400 transition-colors">
               <svg
@@ -44,7 +46,7 @@ export const ConnectSection = () => {
             href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="sr-card group bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
           >
             <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-700 transition-colors">
               <svg
@@ -66,7 +68,7 @@ export const ConnectSection = () => {
             href={SOCIAL_LINKS.facebook}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            className="sr-card group bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
           >
             <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500 transition-colors">
               <svg
@@ -85,13 +87,13 @@ export const ConnectSection = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+        <div className="sr-content bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Stay in the Loop</h3>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
             Get the latest updates on events, projects, and community news
             delivered to your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <div className="sr-cta flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
@@ -107,7 +109,7 @@ export const ConnectSection = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="text-center mt-16">
+        <div className="sr-content text-center mt-16">
           <h3 className="text-xl font-semibold mb-4">Have Questions?</h3>
           <p className="text-blue-100 mb-6">
             Reach out to us directly for partnerships, speaking opportunities,

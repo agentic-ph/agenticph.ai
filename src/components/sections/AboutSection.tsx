@@ -3,10 +3,10 @@ export const AboutSection = () => {
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="sr-heading text-4xl font-bold text-gray-900 mb-6">
             About AgenticPH
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-balance">
+          <p className="sr-content text-xl text-gray-600 max-w-3xl mx-auto text-balance">
             From curious beginners to expert tinkerers, we're shaping the future
             of AI, together.
           </p>
@@ -14,7 +14,7 @@ export const AboutSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Mission Statement */}
-          <div>
+          <div className="sr-left">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Our Mission
             </h3>
@@ -31,8 +31,8 @@ export const AboutSection = () => {
           </div>
 
           {/* Community Features */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div className="sr-right grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-blue-600"
@@ -57,7 +57,7 @@ export const AboutSection = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-purple-600"
@@ -82,7 +82,7 @@ export const AboutSection = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-green-600"
@@ -113,7 +113,7 @@ export const AboutSection = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-orange-600"
