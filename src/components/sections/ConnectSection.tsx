@@ -1,4 +1,5 @@
 import { SOCIAL_LINKS } from "../../utils/constants";
+import { GlassButton } from "../ui/GlassComponents";
 
 export const ConnectSection = () => {
   return (
@@ -8,10 +9,10 @@ export const ConnectSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="sr-heading text-4xl font-bold mb-6">
+          <h2 className="sr-heading text-6xl font-black mb-6">
             Connect With Us
           </h2>
-          <p className="sr-content text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="sr-content text-xl text-purple-100 max-w-3xl mx-auto">
             Join our vibrant community across different platforms. Stay updated,
             share ideas, and collaborate with fellow developers and AI
             enthusiasts.
@@ -36,7 +37,7 @@ export const ConnectSection = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">Discord</h3>
-            <p className="text-blue-100 text-sm">
+            <p className="text-purple-100 text-sm">
               Join our active community for real-time discussions and support
             </p>
           </a>
@@ -58,7 +59,7 @@ export const ConnectSection = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">GitHub</h3>
-            <p className="text-blue-100 text-sm">
+            <p className="text-purple-100 text-sm">
               Explore our open-source projects and contribute to the community
             </p>
           </a>
@@ -70,7 +71,7 @@ export const ConnectSection = () => {
             rel="noopener noreferrer"
             className="sr-card group bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
           >
-            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500 transition-colors">
+            <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500 transition-colors">
               <svg
                 className="w-8 h-8 text-white"
                 fill="currentColor"
@@ -80,7 +81,7 @@ export const ConnectSection = () => {
               </svg>
             </div>
             <h3 className="text-xl font-semibold mb-2">Facebook</h3>
-            <p className="text-blue-100 text-sm">
+            <p className="text-purple-100 text-sm">
               Join our Facebook group for discussions and community updates
             </p>
           </a>
@@ -88,8 +89,8 @@ export const ConnectSection = () => {
 
         {/* Newsletter Signup */}
         <div className="sr-content bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-4">Stay in the Loop</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <h3 className="text-3xl font-black mb-4">Stay in the Loop</h3>
+          <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
             Get the latest updates on events, projects, and community news
             delivered to your inbox.
           </p>
@@ -97,27 +98,29 @@ export const ConnectSection = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              className="flex-1 px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
             />
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            <GlassButton variant="primary" size="md">
               Subscribe
-            </button>
+            </GlassButton>
           </div>
-          <p className="text-blue-200 text-sm mt-4">
+          <p className="text-purple-200 text-sm mt-4">
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>
 
         {/* Contact Info */}
         <div className="sr-content text-center mt-16">
-          <h3 className="text-xl font-semibold mb-4">Have Questions?</h3>
-          <p className="text-blue-100 mb-6">
+          <h3 className="text-2xl font-black mb-4">Have Questions?</h3>
+          <p className="text-purple-100 mb-6">
             Reach out to us directly for partnerships, speaking opportunities,
             or general inquiries.
           </p>
-          <a
+          <GlassButton
             href={`mailto:${SOCIAL_LINKS.email}`}
-            className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            variant="secondary"
+            size="md"
+            className="inline-flex items-center"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -133,7 +136,7 @@ export const ConnectSection = () => {
               />
             </svg>
             {SOCIAL_LINKS.email}
-          </a>
+          </GlassButton>
         </div>
       </div>
     </section>

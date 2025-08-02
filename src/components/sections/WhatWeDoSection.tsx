@@ -1,12 +1,14 @@
+import { GlassButton } from "../ui/GlassComponents";
+
 export const WhatWeDoSection = () => {
   return (
-    <section id="what-we-do" className="py-20 bg-white">
+    <section id="what-we-do" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="sr-heading text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="sr-heading text-6xl font-black text-white mb-6">
             What We Do
           </h2>
-          <p className="sr-content text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="sr-content text-xl text-gray-300 max-w-3xl mx-auto">
             We organize events, workshops, and initiatives that bring together
             the Filipino AI and automation community to learn, build, and
             innovate together.
@@ -15,7 +17,7 @@ export const WhatWeDoSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Meetups */}
-          <div className="sr-card bg-gradient-to-br from-purple-50 to-pink-100 p-8 rounded-xl">
+          <div className="sr-card bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-xl border border-purple-700/30">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
                 <svg
@@ -32,17 +34,15 @@ export const WhatWeDoSection = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">
-                Regular Meetups
-              </h3>
+              <h3 className="text-2xl font-bold text-white">Regular Meetups</h3>
             </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
+            <p className="text-gray-300 mb-4 leading-relaxed">
               Monthly gatherings where professionals and enthusiasts share
               knowledge about AI, automation, prompt engineering, and agentic
               systems. From technical deep-dives to casual discussions over
               coffee.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Whether you're building LLM agents, crafting smart prompts, or
               exploring autonomous workflows, our meetups provide a space to
               connect and learn.
@@ -50,7 +50,7 @@ export const WhatWeDoSection = () => {
           </div>
 
           {/* Mentorship */}
-          <div className="sr-card bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl">
+          <div className="sr-card bg-gradient-to-br from-green-900/50 to-emerald-900/50 p-8 rounded-xl border border-green-700/30">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
                 <svg
@@ -67,15 +67,15 @@ export const WhatWeDoSection = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Mentorship</h3>
+              <h3 className="text-2xl font-bold text-white">Mentorship</h3>
             </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
+            <p className="text-gray-300 mb-4 leading-relaxed">
               Connect with experienced AI practitioners and automation experts
               who provide guidance on career development, technical skills, and
               project implementation. From one-on-one sessions to group
               mentoring.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               Whether you're starting your AI journey or looking to advance your
               expertise, our mentorship program pairs you with industry
               professionals who share their knowledge and experience.
@@ -83,7 +83,7 @@ export const WhatWeDoSection = () => {
           </div>
 
           {/* Community Projects */}
-          <div className="sr-card bg-gradient-to-br from-orange-50 to-red-100 p-8 rounded-xl">
+          <div className="sr-card bg-gradient-to-br from-orange-900/50 to-red-900/50 p-8 rounded-xl border border-orange-700/30">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
                 <svg
@@ -100,16 +100,16 @@ export const WhatWeDoSection = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-white">
                 Community Projects
               </h3>
             </div>
-            <p className="text-gray-700 mb-4 leading-relaxed">
+            <p className="text-gray-300 mb-4 leading-relaxed">
               Collaborative open-source projects where members contribute to
               building AI tools, automation frameworks, and innovative solutions
               that benefit the broader community.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               From hackathons to long-term initiatives, we create opportunities
               for members to work together and make meaningful contributions to
               the AI ecosystem.
@@ -119,23 +119,17 @@ export const WhatWeDoSection = () => {
 
         {/* Call to Action */}
         <div className="sr-content text-center mt-16">
-          <p className="text-lg text-gray-600 mb-8 text-balance">
+          <p className="text-lg text-gray-300 mb-8 text-balance">
             Whether you're new to AI or an experienced builder, you're welcome
             to join this community!
           </p>
           <div className="sr-cta flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#connect"
-              className="inline-flex items-center justify-center bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors"
-            >
+            <GlassButton href="#connect" variant="primary" size="lg">
               Join Our Community
-            </a>
-            <a
-              href="/events"
-              className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors"
-            >
+            </GlassButton>
+            <GlassButton href="/events" variant="secondary" size="lg">
               View Upcoming Events
-            </a>
+            </GlassButton>
           </div>
         </div>
       </div>

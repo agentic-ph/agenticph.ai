@@ -69,8 +69,9 @@ export const GlassButton = ({
 
   const variantClasses = {
     default: "text-white",
-    primary: "text-white bg-gradient-to-r from-blue-500/20 to-purple-500/20",
-    secondary: "text-gray-200 border-white/30",
+    primary:
+      "text-white bg-gradient-to-r from-purple-500/30 to-purple-600/30 border border-purple-400/30 backdrop-blur-md",
+    secondary: "text-gray-200 border-white/40 backdrop-blur-md",
   };
 
   const finalClasses = [
@@ -166,7 +167,7 @@ export const GlassIcon = ({
   icon: Icon,
   className = "",
   size = "md",
-  color = "blue",
+  color = "purple",
 }: GlassIconProps) => {
   const sizeClasses = {
     sm: "w-8 h-8 p-2",
@@ -175,11 +176,11 @@ export const GlassIcon = ({
   };
 
   const colorClasses = {
-    blue: "bg-blue-500/20 text-blue-300",
-    purple: "bg-purple-500/20 text-purple-300",
-    green: "bg-green-500/20 text-green-300",
-    red: "bg-red-500/20 text-red-300",
-    yellow: "bg-yellow-500/20 text-yellow-300",
+    blue: "bg-blue-500/30 text-blue-200",
+    purple: "bg-purple-500/30 text-purple-200",
+    green: "bg-green-500/30 text-green-200",
+    red: "bg-red-500/30 text-red-200",
+    yellow: "bg-yellow-500/30 text-yellow-200",
   };
 
   const finalClasses = [

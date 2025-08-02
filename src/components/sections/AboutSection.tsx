@@ -1,12 +1,12 @@
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="sr-heading text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="sr-heading text-6xl font-black text-white mb-6">
             About AgenticPH
           </h2>
-          <p className="sr-content text-xl text-gray-600 max-w-3xl mx-auto text-balance">
+          <p className="sr-content text-xl text-gray-300 max-w-3xl mx-auto text-balance">
             From curious beginners to expert tinkerers, we're shaping the future
             of AI, together.
           </p>
@@ -15,15 +15,13 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Mission Statement */}
           <div className="sr-left">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Our Mission
-            </h3>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed text-balance">
+            <h3 className="text-3xl font-black text-white mb-6">Our Mission</h3>
+            <p className="text-lg text-gray-300 mb-6 leading-relaxed text-balance">
               AgenticPH is a vibrant community of Filipino tech innovators —
               developers, AI builders, prompt engineers, and creative
               technologists — exploring the frontier of intelligent systems.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Whether you're building LLM-powered agents, designing autonomous
               workflows, crafting smart prompts, or just vibing with code and
               coffee — this is your space to learn, share, and innovate.
@@ -32,10 +30,10 @@ export const AboutSection = () => {
 
           {/* Community Features */}
           <div className="sr-right grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <div className="sr-card bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
                 <svg
-                  className="w-6 h-6 text-blue-600"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -48,19 +46,19 @@ export const AboutSection = () => {
                   />
                 </svg>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+              <h4 className="text-lg font-semibold text-white mb-2">
                 AI Builders
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Building the next generation of intelligent systems and
                 LLM-powered applications.
               </p>
             </div>
 
-            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <div className="sr-card bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <svg
-                  className="w-6 h-6 text-purple-600"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -73,19 +71,19 @@ export const AboutSection = () => {
                   />
                 </svg>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+              <h4 className="text-lg font-semibold text-white mb-2">
                 Prompt Engineers
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Crafting smart prompts and optimizing AI interactions for better
                 outcomes.
               </p>
             </div>
 
-            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <div className="sr-card bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
                 <svg
-                  className="w-6 h-6 text-green-600"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -104,19 +102,19 @@ export const AboutSection = () => {
                   />
                 </svg>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+              <h4 className="text-lg font-semibold text-white mb-2">
                 Automation Geeks
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Creating autonomous workflows and intelligent automation
                 solutions.
               </p>
             </div>
 
-            <div className="sr-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+            <div className="sr-card bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
                 <svg
-                  className="w-6 h-6 text-orange-600"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -129,10 +127,10 @@ export const AboutSection = () => {
                   />
                 </svg>
               </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
+              <h4 className="text-lg font-semibold text-white mb-2">
                 Creative Technologists
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 Bridging creativity and technology to build innovative
                 solutions.
               </p>

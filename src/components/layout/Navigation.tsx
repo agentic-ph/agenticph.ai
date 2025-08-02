@@ -20,19 +20,19 @@ export const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-8">
               <a
                 href="/"
-                className="text-white hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-white hover:text-white px-3 py-2 text-sm font-medium"
               >
                 Home
               </a>
               <a
                 href="/events"
-                className="text-white/80 hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-white/80 hover:text-white/80 px-3 py-2 text-sm font-medium"
               >
                 Events
               </a>
               <a
                 href="/projects"
-                className="text-white/80 hover:text-blue-300 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-white/80 hover:text-white/80 px-3 py-2 text-sm font-medium"
               >
                 Projects
               </a>
@@ -40,7 +40,7 @@ export const Navigation = () => {
                 href={SOCIAL_LINKS.discord}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-button px-4 py-2 rounded-lg text-sm font-medium text-white border border-white/20 hover:border-white/40 transition-all duration-300"
+                className="glass-button px-4 py-2 rounded-lg text-sm font-medium text-white border border-white/20 hover:border-white/20"
               >
                 Join Discord
               </a>
@@ -52,7 +52,7 @@ export const Navigation = () => {
             <button
               type="button"
               id="mobile-menu-button"
-              className="text-white hover:text-blue-300 focus:outline-none focus:text-blue-300"
+              className="text-white hover:text-white focus:outline-none focus:text-white"
               aria-label="Toggle menu"
               aria-expanded="false"
             >
@@ -94,19 +94,19 @@ export const Navigation = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass-feature border-t border-white/10">
           <a
             href="/"
-            className="mobile-menu-link text-white hover:text-blue-300 block px-3 py-2 text-base font-medium"
+            className="mobile-menu-link text-white hover:text-white block px-3 py-2 text-base font-medium"
           >
             Home
           </a>
           <a
             href="/events"
-            className="mobile-menu-link text-white/80 hover:text-blue-300 block px-3 py-2 text-base font-medium"
+            className="mobile-menu-link text-white/80 hover:text-white/80 block px-3 py-2 text-base font-medium"
           >
             Events
           </a>
           <a
             href="/projects"
-            className="mobile-menu-link text-white/80 hover:text-blue-300 block px-3 py-2 text-base font-medium"
+            className="mobile-menu-link text-white/80 hover:text-white/80 block px-3 py-2 text-base font-medium"
           >
             Projects
           </a>
