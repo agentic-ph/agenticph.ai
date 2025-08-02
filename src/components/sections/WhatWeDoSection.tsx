@@ -2,7 +2,7 @@ import { GlassButton } from "../ui/GlassComponents";
 
 export const WhatWeDoSection = () => {
   return (
-    <section id="what-we-do" className="py-20 bg-gray-900">
+    <section id="what-we-do" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="sr-heading text-6xl font-black text-white mb-6">

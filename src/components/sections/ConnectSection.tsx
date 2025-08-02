@@ -3,10 +3,7 @@ import { GlassButton } from "../ui/GlassComponents";
 
 export const ConnectSection = () => {
   return (
-    <section
-      id="connect"
-      className="py-20 bg-gradient-to-br from-blue-900 to-purple-900 text-white"
-    >
+    <section id="connect" className="py-20 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="sr-heading text-6xl font-black mb-6">
