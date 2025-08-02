@@ -1,5 +1,5 @@
 import { Layout } from "../layout/Layout";
-
+import { GlassButton } from "../ui/GlassComponents";
 import { SOCIAL_LINKS } from "../../utils/constants";
 
 // Define types for projects
@@ -92,35 +92,35 @@ export const ProjectsPage = () => {
       title="Projects - AgenticPH"
       description="Explore open-source projects by the AgenticPH community. Contribute to AI, automation, and developer tools."
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-black">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20">
+        <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-20 pt-36">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            <h1 className="sr-hero text-4xl sm:text-5xl font-bold mb-6">
               Community Projects
             </h1>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
+            <p className="sr-content text-xl text-purple-100 max-w-3xl mx-auto mb-8">
               Discover and contribute to open-source projects built by the
               AgenticPH community. From AI tools to automation scripts, we're
               building the future together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+            <div className="sr-cta flex flex-col sm:flex-row gap-4 justify-center">
+              <GlassButton
                 href="https://github.com/agentic-ph"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors"
+                variant="secondary"
+                size="lg"
+                external
               >
                 View on GitHub
-              </a>
-              <a
+              </GlassButton>
+              <GlassButton
                 href={SOCIAL_LINKS.discord}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-colors"
+                variant="primary"
+                size="lg"
+                external
               >
                 Propose a Project
-              </a>
+              </GlassButton>
             </div>
           </div>
         </section>
@@ -128,7 +128,7 @@ export const ProjectsPage = () => {
         {/* Featured Projects */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="sr-heading text-5xl font-black text-white mb-8">
               Featured Projects
             </h2>
 
@@ -137,29 +137,29 @@ export const ProjectsPage = () => {
                 {featuredProjects.map((project) => (
                   <div
                     key={project.id}
-                    className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-purple-200"
+                    className="sr-card bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-shadow overflow-hidden border border-purple-600/30"
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
                           <div className="flex items-center mb-2">
-                            <h3 className="text-xl font-semibold text-gray-900">
+                            <h3 className="text-xl font-semibold text-white">
                               {project.name}
                             </h3>
-                            <span className="ml-3 px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">
+                            <span className="ml-3 px-2 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full">
                               Featured
                             </span>
                           </div>
-                          <p className="text-gray-600 mb-4">
+                          <p className="text-gray-300 mb-4">
                             {project.description}
                           </p>
                         </div>
                       </div>
 
                       <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <div className="flex items-center space-x-4 text-sm text-gray-400">
                           <div className="flex items-center">
-                            <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
+                            <div className="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
                             {project.language}
                           </div>
                           <div className="flex items-center">
@@ -187,7 +187,7 @@ export const ProjectsPage = () => {
                             {project.forks}
                           </div>
                         </div>
-                        <div className="text-sm text-gray-500">
+                        <div className="text-sm text-gray-400">
                           Updated{" "}
                           {new Date(project.lastUpdated).toLocaleDateString()}
                         </div>
@@ -197,7 +197,7 @@ export const ProjectsPage = () => {
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                            className="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded-full"
                           >
                             {tag}
                           </span>
@@ -205,14 +205,14 @@ export const ProjectsPage = () => {
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
+                        <span className="px-3 py-1 bg-purple-900/50 text-purple-300 text-sm rounded-full">
                           {project.category}
                         </span>
                         <a
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                          className="inline-flex items-center bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
                         >
                           <svg
                             className="w-4 h-4 mr-2"
@@ -233,7 +233,7 @@ export const ProjectsPage = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16 mb-16">
+              <div className="sr-content text-center py-16 mb-16">
                 <svg
                   className="w-16 h-16 text-gray-400 mx-auto mb-4"
                   fill="none"
@@ -247,10 +247,10 @@ export const ProjectsPage = () => {
                     d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                   />
                 </svg>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   No featured projects yet
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   We're working on exciting projects that will be featured here
                   soon!
                 </p>
@@ -279,9 +279,9 @@ export const ProjectsPage = () => {
         </section>
 
         {/* Community Projects */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="sr-heading text-5xl font-black text-white mb-8">
               Community Projects
             </h2>
 
@@ -290,24 +290,24 @@ export const ProjectsPage = () => {
                 {communityProjects.map((project) => (
                   <div
                     key={project.id}
-                    className="bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                    className="sr-card bg-black rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900">
+                        <h3 className="text-lg font-semibold text-white">
                           {project.name}
                         </h3>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                        <span className="px-2 py-1 bg-purple-900/50 text-purple-300 text-xs rounded-full">
                           {project.category}
                         </span>
                       </div>
 
-                      <p className="text-gray-600 mb-4">
+                      <p className="text-gray-300 mb-4">
                         {project.description}
                       </p>
 
                       <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <div className="flex items-center space-x-4 text-sm text-gray-400">
                           <div className="flex items-center">
                             <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
                             {project.language}
@@ -343,7 +343,7 @@ export const ProjectsPage = () => {
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded-full"
+                            className="px-2 py-1 bg-gray-600 text-gray-300 text-xs rounded-full"
                           >
                             {tag}
                           </span>
@@ -354,7 +354,7 @@ export const ProjectsPage = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                        className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
                       >
                         View Project
                         <svg
@@ -376,7 +376,7 @@ export const ProjectsPage = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12">
+              <div className="sr-content text-center py-12">
                 <svg
                   className="w-16 h-16 text-gray-400 mx-auto mb-4"
                   fill="none"
@@ -390,17 +390,17 @@ export const ProjectsPage = () => {
                     d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   No community projects yet
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   Be the first to contribute a project to our community!
                 </p>
                 <a
                   href={SOCIAL_LINKS.discord}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                  className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
                 >
                   Propose a Project
                   <svg
@@ -425,29 +425,31 @@ export const ProjectsPage = () => {
         {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Contribute?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <h2 className="sr-heading text-5xl font-black mb-4">
+              Ready to Contribute?
+            </h2>
+            <p className="sr-content text-xl text-purple-100 mb-8">
               Join our community and help build the future of AI and automation
               tools. Whether you're a beginner or expert, there's a place for
               you.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+            <div className="sr-cta flex flex-col sm:flex-row gap-4 justify-center">
+              <GlassButton
                 href="https://github.com/agentic-ph"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors"
+                variant="secondary"
+                size="lg"
+                external
               >
                 Browse All Projects
-              </a>
-              <a
+              </GlassButton>
+              <GlassButton
                 href={SOCIAL_LINKS.discord}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-colors"
+                variant="primary"
+                size="lg"
+                external
               >
                 Join the Discussion
-              </a>
+              </GlassButton>
             </div>
           </div>
         </section>

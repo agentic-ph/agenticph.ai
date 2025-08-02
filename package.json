@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "hono": "^4.8.10",
+    "scrollreveal": "^4.0.9",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {

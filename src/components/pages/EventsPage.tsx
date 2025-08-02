@@ -1,5 +1,5 @@
 import { Layout } from "../layout/Layout";
-
+import { GlassButton } from "../ui/GlassComponents";
 import { SOCIAL_LINKS } from "../../utils/constants";
 
 // Define types for events
@@ -65,14 +65,14 @@ export const EventsPage = () => {
       title="Events - AgenticPH"
       description="Join AgenticPH events, workshops, and meetups. Learn about AI, automation, and connect with the community."
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-black">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 pt-36">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+            <h1 className="sr-hero text-4xl sm:text-5xl font-bold mb-6">
               Community Events
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="sr-content text-xl text-purple-100 max-w-3xl mx-auto">
               Join our workshops, meetups, and learning sessions. Connect with
               fellow developers and expand your knowledge in AI and automation.
             </p>
@@ -82,7 +82,7 @@ export const EventsPage = () => {
         {/* Upcoming Events */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="sr-heading text-5xl font-black text-white mb-8">
               Upcoming Events
             </h2>
 
@@ -91,15 +91,15 @@ export const EventsPage = () => {
                 {upcomingEvents.map((event) => (
                   <div
                     key={event.id}
-                    className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                    className="sr-card bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
                   >
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          <h3 className="text-xl font-semibold text-white mb-2">
                             {event.title}
                           </h3>
-                          <div className="flex items-center text-gray-600 mb-2">
+                          <div className="flex items-center text-gray-300 mb-2">
                             <svg
                               className="w-5 h-5 mr-2"
                               fill="none"
@@ -120,7 +120,7 @@ export const EventsPage = () => {
                               day: "numeric",
                             })}
                           </div>
-                          <div className="flex items-center text-gray-600 mb-2">
+                          <div className="flex items-center text-gray-300 mb-2">
                             <svg
                               className="w-5 h-5 mr-2"
                               fill="none"
@@ -136,7 +136,7 @@ export const EventsPage = () => {
                             </svg>
                             {event.time}
                           </div>
-                          <div className="flex items-center text-gray-600 mb-4">
+                          <div className="flex items-center text-gray-300 mb-4">
                             <svg
                               className="w-5 h-5 mr-2"
                               fill="none"
@@ -161,13 +161,13 @@ export const EventsPage = () => {
                         </div>
                       </div>
 
-                      <p className="text-gray-700 mb-4">{event.description}</p>
+                      <p className="text-gray-300 mb-4">{event.description}</p>
 
                       <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                        <h4 className="text-sm font-semibold text-white mb-2">
                           Speakers:
                         </h4>
-                        <p className="text-gray-600">
+                        <p className="text-gray-300">
                           {event.speakers.join(", ")}
                         </p>
                       </div>
@@ -176,18 +176,19 @@ export const EventsPage = () => {
                         {event.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                            className="px-3 py-1 bg-purple-900/50 text-purple-300 text-sm rounded-full"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
 
-                      <a
+                      <GlassButton
                         href={event.registrationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                        variant="primary"
+                        size="md"
+                        external
+                        className="inline-flex items-center"
                       >
                         Register Now
                         <svg
@@ -203,13 +204,13 @@ export const EventsPage = () => {
                             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                           />
                         </svg>
-                      </a>
+                      </GlassButton>
                     </div>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12">
+              <div className="sr-content text-center py-12">
                 <svg
                   className="w-16 h-16 text-gray-400 mx-auto mb-4"
                   fill="none"
@@ -223,29 +224,29 @@ export const EventsPage = () => {
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                   />
                 </svg>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   No upcoming events
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   Stay tuned for exciting events coming soon!
                 </p>
-                <a
+                <GlassButton
                   href={SOCIAL_LINKS.discord}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                  variant="primary"
+                  size="md"
+                  external
                 >
                   Join Discord for Updates
-                </a>
+                </GlassButton>
               </div>
             )}
           </div>
         </section>
 
         {/* Past Events */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="sr-heading text-5xl font-black text-white mb-8">
               Past Events
             </h2>
 
@@ -254,13 +255,13 @@ export const EventsPage = () => {
                 {pastEvents.map((event) => (
                   <div
                     key={event.id}
-                    className="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+                    className="sr-card bg-black rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
                   >
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      <h3 className="text-xl font-semibold text-white mb-2">
                         {event.title}
                       </h3>
-                      <div className="flex items-center text-gray-600 mb-2">
+                      <div className="flex items-center text-gray-300 mb-2">
                         <svg
                           className="w-5 h-5 mr-2"
                           fill="none"
@@ -282,13 +283,13 @@ export const EventsPage = () => {
                         })}
                       </div>
 
-                      <p className="text-gray-700 mb-4">{event.description}</p>
+                      <p className="text-gray-300 mb-4">{event.description}</p>
 
                       <div className="flex flex-wrap gap-2 mb-4">
                         {event.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full"
+                            className="px-3 py-1 bg-gray-600 text-gray-300 text-sm rounded-full"
                           >
                             {tag}
                           </span>
@@ -300,7 +301,7 @@ export const EventsPage = () => {
                           href={event.recordingUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                          className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
                         >
                           Watch Recording
                           <svg
@@ -323,7 +324,7 @@ export const EventsPage = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12">
+              <div className="sr-content text-center py-12">
                 <svg
                   className="w-16 h-16 text-gray-400 mx-auto mb-4"
                   fill="none"
@@ -337,10 +338,10 @@ export const EventsPage = () => {
                     d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                   />
                 </svg>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-white mb-2">
                   No past events yet
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   Check back soon for recordings and highlights from our
                   community events.
                 </p>
@@ -348,7 +349,7 @@ export const EventsPage = () => {
                   href={SOCIAL_LINKS.discord}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
                 >
                   Join Discord to Stay Updated
                   <svg
@@ -371,18 +372,21 @@ export const EventsPage = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 bg-blue-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Want to Host an Event?</h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <h2 className="sr-heading text-5xl font-black mb-4">
+              Want to Host an Event?
+            </h2>
+            <p className="sr-content text-xl text-purple-100 mb-8">
               Have an idea for a workshop, talk, or meetup? We'd love to hear
               from you!
             </p>
-            <a
+            <GlassButton
               href={SOCIAL_LINKS.discord}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors"
+              variant="secondary"
+              size="lg"
+              external
+              className="sr-cta inline-flex items-center"
             >
               Propose an Event
               <svg
@@ -398,7 +402,7 @@ export const EventsPage = () => {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
-            </a>
+            </GlassButton>
           </div>
         </section>
       </div>
