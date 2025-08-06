@@ -15,8 +15,8 @@ export const WhatWeDoSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Meetups */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Events */}
           <div className="sr-card bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-xl border border-purple-700/30">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
@@ -30,26 +30,18 @@ export const WhatWeDoSection = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white">Regular Meetups</h3>
+              <h3 className="text-2xl font-bold text-white">Events</h3>
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              Monthly gatherings where professionals and enthusiasts share
-              knowledge about AI, automation, prompt engineering, and agentic
-              systems. From technical deep-dives to casual discussions over
-              coffee.
-            </p>
             <p className="text-gray-300 leading-relaxed">
-              Whether you're building LLM agents, crafting smart prompts, or
-              exploring autonomous workflows, our meetups provide a space to
-              connect and learn.
+              Monthly gatherings where AI professionals and enthusiasts share knowledge, from technical deep-dives to casual networking.
             </p>
           </div>
 
-          {/* Mentorship */}
+          {/* Trainings */}
           <div className="sr-card bg-gradient-to-br from-green-900/50 to-emerald-900/50 p-8 rounded-xl border border-green-700/30">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
@@ -67,18 +59,35 @@ export const WhatWeDoSection = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white">Mentorship</h3>
+              <h3 className="text-2xl font-bold text-white">Trainings</h3>
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              Connect with experienced AI practitioners and automation experts
-              who provide guidance on career development, technical skills, and
-              project implementation. From one-on-one sessions to group
-              mentoring.
-            </p>
             <p className="text-gray-300 leading-relaxed">
-              Whether you're starting your AI journey or looking to advance your
-              expertise, our mentorship program pairs you with industry
-              professionals who share their knowledge and experience.
+              Hands-on workshops and training programs from beginner to advanced levels, building real-world AI capabilities.
+            </p>
+          </div>
+
+          {/* AI Services */}
+          <div className="sr-card bg-gradient-to-br from-blue-900/50 to-cyan-900/50 p-8 rounded-xl border border-blue-700/30">
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white">AI Services</h3>
+            </div>
+            <p className="text-gray-300 leading-relaxed">
+              Expert AI consulting and implementation services from our community practitioners for custom solutions and automation workflows.
             </p>
           </div>
 
@@ -104,15 +113,8 @@ export const WhatWeDoSection = () => {
                 Community Projects
               </h3>
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed">
-              Collaborative open-source projects where members contribute to
-              building AI tools, automation frameworks, and innovative solutions
-              that benefit the broader community.
-            </p>
             <p className="text-gray-300 leading-relaxed">
-              From hackathons to long-term initiatives, we create opportunities
-              for members to work together and make meaningful contributions to
-              the AI ecosystem.
+              Collaborative open-source projects and hackathons building AI tools and automation frameworks for the community.
             </p>
           </div>
         </div>

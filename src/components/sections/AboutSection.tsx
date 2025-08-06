@@ -16,15 +16,8 @@ export const AboutSection = () => {
           {/* Mission Statement */}
           <div className="sr-left">
             <h3 className="text-3xl font-black text-white mb-6">Our Mission</h3>
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed text-balance">
-              AgenticPH is a vibrant community of Filipino tech innovators —
-              developers, AI builders, prompt engineers, and creative
-              technologists — exploring the frontier of intelligent systems.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Whether you're building LLM-powered agents, designing autonomous
-              workflows, crafting smart prompts, or just vibing with code and
-              coffee — this is your space to learn, share, and innovate.
+            <p className="text-lg text-gray-300 leading-relaxed text-balance">
+              Building the future of AI together as a vibrant community of Filipino tech innovators.
             </p>
           </div>
 
@@ -47,7 +40,7 @@ export const AboutSection = () => {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
-                AI Builders
+                AI Agents
               </h4>
               <p className="text-gray-300">
                 Building the next generation of intelligent systems and
@@ -72,7 +65,7 @@ export const AboutSection = () => {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
-                Prompt Engineers
+                Context Engineering
               </h4>
               <p className="text-gray-300">
                 Crafting smart prompts and optimizing AI interactions for better
@@ -103,7 +96,7 @@ export const AboutSection = () => {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
-                Automation Geeks
+                Workflow Automation
               </h4>
               <p className="text-gray-300">
                 Creating autonomous workflows and intelligent automation
@@ -128,7 +121,7 @@ export const AboutSection = () => {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
-                Creative Technologists
+                MCP Server
               </h4>
               <p className="text-gray-300">
                 Bridging creativity and technology to build innovative

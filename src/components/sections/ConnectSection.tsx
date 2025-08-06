@@ -2,6 +2,7 @@ import { SOCIAL_LINKS } from "../../utils/constants";
 import { GlassButton } from "../ui/GlassComponents";
 
 export const ConnectSection = () => {
+  // Native JavaScript will be handled via inline script
   return (
     <section id="connect" className="py-20 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,59 +84,231 @@ export const ConnectSection = () => {
             </p>
           </a>
         </div>
-
-        {/* Newsletter Signup */}
-        <div className="sr-content bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-          <h3 className="text-3xl font-black mb-4">Stay in the Loop</h3>
-          <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-            Get the latest updates on events, projects, and community news
-            delivered to your inbox.
-          </p>
-          <div className="sr-cta flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
-            />
-            <GlassButton variant="primary" size="md">
-              Subscribe
-            </GlassButton>
+        <form id="newsletter-form">
+          {/* Newsletter Signup */}
+          <div className="sr-content bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+            <h3 className="text-3xl font-black mb-4">Stay in the Loop</h3>
+            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
+              Get the latest updates on events, projects, and community news
+              delivered to your inbox.
+            </p>
+            <div className="sr-cta flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="hidden"
+                name="access_key"
+                value="19e3831f-343f-403c-afd9-4860e18b22e9"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                className="flex-1 px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: "none" }}
+              />
+              <GlassButton variant="primary" size="md" type="submit">
+                Subscribe
+              </GlassButton>
+            </div>
+            <div id="newsletter-result" className="mt-4 text-center text-sm"></div>
+            <p className="text-purple-200 text-sm mt-4">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
           </div>
-          <p className="text-purple-200 text-sm mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
-        </div>
+        </form>
 
-        {/* Contact Info */}
+        {/* Contact Form */}
         <div className="sr-content text-center mt-16">
           <h3 className="text-2xl font-black mb-4">Have Questions?</h3>
           <p className="text-purple-100 mb-6">
             Reach out to us directly for partnerships, speaking opportunities,
             or general inquiries.
           </p>
-          <GlassButton
-            href={`mailto:${SOCIAL_LINKS.email}`}
-            variant="secondary"
-            size="md"
-            className="inline-flex items-center"
-          >
-            <svg
-              className="w-5 h-5 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+
+          <form id="contact-form" className="max-w-lg mx-auto text-left">
+            <input
+              type="hidden"
+              name="access_key"
+              value="19e3831f-343f-403c-afd9-4860e18b22e9"
+            />
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-purple-100 mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                placeholder="Your name"
               />
-            </svg>
-            {SOCIAL_LINKS.email}
-          </GlassButton>
+            </div>
+            <input
+              type="hidden"
+              name="access_key"
+              value="19e3831f-343f-403c-afd9-4860e18b22e9"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none;"
+            />
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-purple-100 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                placeholder="your@email.com"
+              />
+            </div>
+
+            <div className="mb-6">
+              <label htmlFor="message" className="block text-purple-100 mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={4}
+                className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent resize-none"
+                placeholder="Your message..."
+              />
+            </div>
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              className="hidden"
+              style={{ display: "none" }}
+            />
+
+            <div className="text-center">
+              <GlassButton
+                type="submit"
+                variant="primary"
+                size="md"
+                className="w-full sm:w-auto"
+              >
+                Send Message
+              </GlassButton>
+            </div>
+
+            <div id="contact-result" className="mt-4 text-center text-sm"></div>
+          </form>
         </div>
       </div>
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const result = document.getElementById('contact-result');
+
+            if (!form || !result) return;
+
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+              result.innerHTML = "Please wait...";
+              result.className = "mt-4 text-center text-sm text-purple-200";
+
+              fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: json
+              })
+              .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                  result.innerHTML = "Form submitted successfully";
+                  result.className = "mt-4 text-center text-sm text-green-400";
+                } else {
+                  console.log(response);
+                  result.innerHTML = json.message;
+                  result.className = "mt-4 text-center text-sm text-red-400";
+                }
+              })
+              .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.className = "mt-4 text-center text-sm text-red-400";
+              })
+              .then(function() {
+                form.reset();
+                setTimeout(() => {
+                  result.style.display = "none";
+                }, 3000);
+              });
+            });
+          });
+
+          // Newsletter form handler
+          const newsletterForm = document.getElementById('newsletter-form');
+          const newsletterResult = document.getElementById('newsletter-result');
+
+          if (newsletterForm && newsletterResult) {
+            newsletterForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const formData = new FormData(newsletterForm);
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+              newsletterResult.innerHTML = "Please wait...";
+              newsletterResult.className = "mt-4 text-center text-sm text-purple-200";
+
+              fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: json
+              })
+              .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                  newsletterResult.innerHTML = "Successfully subscribed!";
+                  newsletterResult.className = "mt-4 text-center text-sm text-green-400";
+                } else {
+                  console.log(response);
+                  newsletterResult.innerHTML = json.message || "Subscription failed";
+                  newsletterResult.className = "mt-4 text-center text-sm text-red-400";
+                }
+              })
+              .catch(error => {
+                console.log(error);
+                newsletterResult.innerHTML = "Something went wrong!";
+                newsletterResult.className = "mt-4 text-center text-sm text-red-400";
+              })
+              .then(function() {
+                newsletterForm.reset();
+                setTimeout(() => {
+                  newsletterResult.style.display = "none";
+                }, 3000);
+              });
+            });
+          }
+        `,
+        }}
+      />
     </section>
   );
 };

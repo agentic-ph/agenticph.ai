@@ -45,6 +45,19 @@ export const ProjectsPage = () => {
       tags: ["MCP", "Icons", "Design Tools", "JavaScript"],
       category: "Developer Tools",
     },
+    {
+      id: 3,
+      name: "node-vm-mcp",
+      description:
+        "MCP server providing secure Node.js VM sandbox execution capabilities. Execute JavaScript code in isolated environments with full VM controls.",
+      githubUrl: "https://github.com/agentic-ph/node-vm-mcp",
+      stars: 28,
+      forks: 6,
+      language: "TypeScript",
+      lastUpdated: "2024-08-05",
+      tags: ["MCP", "Node.js", "VM", "Sandbox", "TypeScript"],
+      category: "Developer Tools",
+    },
   ];
 
   const communityProjects: Project[] = [

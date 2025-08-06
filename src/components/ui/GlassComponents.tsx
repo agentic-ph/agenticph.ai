@@ -47,6 +47,7 @@ interface GlassButtonProps {
   variant?: "default" | "primary" | "secondary";
   size?: "sm" | "md" | "lg";
   external?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
 export const GlassButton = ({
@@ -57,6 +58,7 @@ export const GlassButton = ({
   variant = "default",
   size = "md",
   external = false,
+  type = "button",
 }: GlassButtonProps) => {
   const baseClasses =
     "glass-button font-semibold transition-all duration-300 inline-flex items-center justify-center";
@@ -96,7 +98,7 @@ export const GlassButton = ({
   }
 
   return (
-    <button onClick={onClick} className={finalClasses}>
+    <button onClick={onClick} className={finalClasses} type={type}>
       {children}
     </button>
   );
