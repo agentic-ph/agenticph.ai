@@ -7,38 +7,68 @@ export const renderer = jsxRenderer(({ children }) => {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        
+        <title>AgenticPH - Philippines' Premier AI & Developer Community</title>
+        
         <meta
           name="description"
-          content="AgenticPH - Next-gen community of Filipino developers, AI builders, prompt engineers, context hackers, automation geeks, and creative technologists exploring the frontier of agentic software and intelligent systems."
+          content="Join Philippines' leading AI developer community. Connect with Filipino AI builders, prompt engineers, and creative technologists exploring agentic software, machine learning, and intelligent systems. Build the future together."
         />
         <meta
           name="keywords"
-          content="AgenticPH, Filipino developers, AI builders, prompt engineers, automation, agentic software, intelligent systems, Philippines, community"
+          content="AgenticPH, Filipino AI developers, Philippines AI community, prompt engineering Philippines, machine learning developers Manila, AI builders Philippines, agentic software development, intelligent systems Philippines, Filipino tech community, AI startups Philippines, prompt engineers Manila, automation developers Philippines, context hackers, creative technologists, AI meetups Philippines, developer community Manila, artificial intelligence Philippines, LLM developers, Filipino AI engineers, tech innovation Philippines"
         />
         <meta name="author" content="AgenticPH" />
+        <meta name="publisher" content="AgenticPH" />
+        <meta name="copyright" content="© 2025 AgenticPH. All rights reserved." />
+        <meta name="language" content="EN" />
+        <meta name="distribution" content="global" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="rating" content="general" />
+        <meta name="geo.country" content="PH" />
+        <meta name="geo.placename" content="Philippines" />
+        <meta name="target" content="all" />
+        <meta name="audience" content="developers, AI builders, engineers, technologists" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://agenticph.com" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="AgenticPH - Next-gen Filipino Developer Community"
+          content="AgenticPH - Philippines' Premier AI & Developer Community"
         />
         <meta
           property="og:description"
-          content="Join AgenticPH, a community of Filipino developers, AI builders, prompt engineers, and creative technologists exploring agentic software and intelligent systems."
+          content="Join Philippines' leading AI developer community. Connect with Filipino AI builders, prompt engineers, and creative technologists exploring agentic software, machine learning, and intelligent systems."
         />
         <meta property="og:site_name" content="AgenticPH" />
+        <meta property="og:image" content="/cover.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://agenticph.com" />
+        <meta property="og:locale" content="en_PH" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="@agenticph" />
+        <meta property="twitter:creator" content="@agenticph" />
         <meta
           property="twitter:title"
-          content="AgenticPH - Next-gen Filipino Developer Community"
+          content="AgenticPH - Philippines' Premier AI & Developer Community"
         />
         <meta
           property="twitter:description"
-          content="Join AgenticPH, a community of Filipino developers, AI builders, prompt engineers, and creative technologists exploring agentic software and intelligent systems."
+          content="Join Philippines' leading AI developer community. Connect with Filipino AI builders, prompt engineers, and creative technologists exploring agentic software, machine learning, and intelligent systems."
         />
+        <meta property="twitter:image" content="/cover.jpg" />
+        <meta property="twitter:image:alt" content="AgenticPH - Philippines' AI Developer Community" />
+        <meta property="twitter:url" content="https://agenticph.com" />
 
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
