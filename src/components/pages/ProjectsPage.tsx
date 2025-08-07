@@ -127,10 +127,9 @@ export const ProjectsPage = () => {
                 View on GitHub
               </GlassButton>
               <GlassButton
-                href={SOCIAL_LINKS.discord}
+                href="#submit-project"
                 variant="primary"
                 size="lg"
-                external
               >
                 Propose a Project
               </GlassButton>
@@ -410,9 +409,7 @@ export const ProjectsPage = () => {
                   Be the first to contribute a project to our community!
                 </p>
                 <a
-                  href={SOCIAL_LINKS.discord}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#submit-project"
                   className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
                 >
                   Propose a Project
@@ -432,6 +429,125 @@ export const ProjectsPage = () => {
                 </a>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Submit Project Section */}
+        <section id="submit-project" className="py-20 bg-black text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="sr-heading text-5xl font-black mb-6">
+                Submit Your Project
+              </h2>
+              <p className="sr-content text-xl text-purple-100 max-w-3xl mx-auto">
+                Have an awesome project you'd like to share with the AgenticPH
+                community? Submit it here and we'll consider featuring it in our
+                project showcase.
+              </p>
+            </div>
+
+            <form id="project-submission-form" className="max-w-lg mx-auto">
+              <input
+                type="hidden"
+                name="access_key"
+                value="19e3831f-343f-403c-afd9-4860e18b22e9"
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: "none" }}
+              />
+              
+              <div className="mb-6">
+                <label htmlFor="project-title" className="block text-purple-100 mb-2">
+                  Project Title
+                </label>
+                <input
+                  type="text"
+                  id="project-title"
+                  name="Project Title"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                  placeholder="My Awesome Project"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="project-description" className="block text-purple-100 mb-2">
+                  Project Description
+                </label>
+                <textarea
+                  id="project-description"
+                  name="Project Description"
+                  required
+                  rows={4}
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent resize-none"
+                  placeholder="Describe your project, what it does, and why it's useful..."
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="github-repo" className="block text-purple-100 mb-2">
+                  GitHub Repository URL
+                </label>
+                <input
+                  type="url"
+                  id="github-repo"
+                  name="GitHub Repository"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                  placeholder="https://github.com/yourusername/yourproject"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="project-category" className="block text-purple-100 mb-2">
+                  Project Category
+                </label>
+                <select
+                  id="project-category"
+                  name="Project Category"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                >
+                  <option value="" className="bg-gray-900">Select a category</option>
+                  <option value="MCP" className="bg-gray-900">MCP</option>
+                  <option value="AI & ML" className="bg-gray-900">AI & ML</option>
+                  <option value="Developer Tools" className="bg-gray-900">Developer Tools</option>
+                  <option value="Data & APIs" className="bg-gray-900">Data & APIs</option>
+                  <option value="Automation" className="bg-gray-900">Automation</option>
+                  <option value="Other" className="bg-gray-900">Other</option>
+                </select>
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="contact-email" className="block text-purple-100 mb-2">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="Contact Email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-purple-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div className="text-center">
+                <GlassButton
+                  type="submit"
+                  variant="primary"
+                  size="lg"
+                  className="w-full sm:w-auto"
+                >
+                  Submit Project
+                </GlassButton>
+              </div>
+
+              <div id="project-submission-result" className="mt-4 text-center text-sm"></div>
+            </form>
           </div>
         </section>
 
@@ -456,12 +572,11 @@ export const ProjectsPage = () => {
                 Browse All Projects
               </GlassButton>
               <GlassButton
-                href={SOCIAL_LINKS.discord}
+                href="#submit-project"
                 variant="primary"
                 size="lg"
-                external
               >
-                Join the Discussion
+                Propose a Project
               </GlassButton>
             </div>
           </div>
@@ -470,3 +585,70 @@ export const ProjectsPage = () => {
     </Layout>
   );
 };
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('project-submission-form');
+            const result = document.getElementById('project-submission-result');
+
+            if (!form || !result) return;
+
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const object = Object.fromEntries(formData);
+              const json = JSON.stringify(object);
+              result.innerHTML = "Please wait...";
+              result.className = "mt-4 text-center text-sm text-purple-200";
+
+              fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: json
+              })
+              .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                  result.innerHTML = "Project submitted successfully! We'll review it soon.";
+                  result.className = "mt-4 text-center text-sm text-green-400";
+                } else {
+                  console.log(response);
+                  result.innerHTML = json.message;
+                  result.className = "mt-4 text-center text-sm text-red-400";
+                }
+              })
+              .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+                result.className = "mt-4 text-center text-sm text-red-400";
+              })
+              .then(function() {
+                form.reset();
+                setTimeout(() => {
+                  result.style.display = "none";
+                }, 5000);
+              });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                  target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              });
+            });
+          });
+        `,
+        }}
+      />
