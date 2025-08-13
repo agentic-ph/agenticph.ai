@@ -58,6 +58,19 @@ export const ProjectsPage = () => {
       tags: ["MCP", "Node.js", "VM", "Sandbox", "TypeScript"],
       category: "Developer Tools",
     },
+    {
+      id: 4,
+      name: "devfinder-mcp",
+      description:
+        "MCP server for discovering and connecting with developers based on skills, interests, and project compatibility. Helps build better development teams.",
+      githubUrl: "https://github.com/agentic-ph/devfinder-mcp",
+      stars: 0,
+      forks: 0,
+      language: "TypeScript",
+      lastUpdated: "2024-08-13",
+      tags: ["MCP", "Developer Discovery", "Team Building", "TypeScript"],
+      category: "Developer Tools",
+    },
   ];
 
   const communityProjects: Project[] = [
